@@ -1,13 +1,4 @@
-body
- {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
+
 
 
 .header{
@@ -33,6 +24,7 @@ body
   text-align: center;
   background-color: #ccc;
   border-bottom: 1px solid;
+  padding-top: 12px;
 }
 
 .main{
@@ -51,6 +43,7 @@ body
   width: 40%;
   float: left;
   background-color: grey;
+  padding: 5px 5px 5px 5px;
 }
 
 .right{
