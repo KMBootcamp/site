@@ -3,6 +3,7 @@
   float: left;
   background-color: brown;
   text-align: center;
+  padding: 15px 15px 15px 15px;
 }
 
 .footer{
@@ -10,12 +11,44 @@
   float: left;
   background-color: brown;
   text-align: center;
+  padding: 15px 15px 15px 15px;
 }
 
 .menu{
-
+  width: 100%;
+  float: left;
+  text-align: center;
+  background: #ccc;
 }
 
 .main{
+  padding: 15px 15px 15px 15px;
+  width: 100%;
+  float: left;
+  background-color: grey;
+  text-align: center;
+}
 
+.left{
+  width: 30%;
+  float: left;
+}
+
+.middle{
+  width: 40%;
+  float: left;
+}
+
+.right{
+  width: 30%;
+  float: left;
+}
+
+.menu--items{
+    list-style-type: none;
+}
+
+.menu--item{
+  display: inline-block;
+  margin: 0 10px;
 }
