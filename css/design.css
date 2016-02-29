@@ -24,6 +24,7 @@ body
   background-color: brown;
   text-align: center;
   padding: 15px 15px 15px 15px;
+  border-top: 1px solid;
 }
 
 .menu{
@@ -31,13 +32,13 @@ body
   float: left;
   text-align: center;
   background-color: #ccc;
+  border-bottom: 1px solid;
 }
 
 .main{
-  padding: 15px 15px 15px 15px;
+  padding: 0px 15px 0px 15px;
   width: 100%;
   float: left;
-  background-color: grey;
   text-align: center;
 }
 
@@ -49,6 +50,7 @@ body
 .middle{
   width: 40%;
   float: left;
+  background-color: grey;
 }
 
 .right{
@@ -63,4 +65,10 @@ body
 .menu--item{
   display: inline-block;
   margin: 0 10px;
+}
+
+@media (max-width: 480px){
+  .main{
+    font-size: 24px;
+  }
 }
