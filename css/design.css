@@ -68,7 +68,7 @@ body
 }
 
 @media (max-width: 480px){
-  .main{
+  .middle{
     font-size: 24px;
   }
 }
