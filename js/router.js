@@ -1,7 +1,9 @@
-define(['jquery', 'underscore', 'backbone', 'views/default'],
-function ($, _, Backbone, DefaultView) {
+define(['jquery', 'underscore', 'backbone', 'views/default', 'views/about', 'views/contact'],
+function ($, _, Backbone, DefaultView, AboutView, ContactView) {
   var SiteRouter = Backbone.Router.extend({
     routes: {
+      'about': 'aboutAction',
+      'contact': 'contactAction',
       '*other': 'defaultAction'
     }
   });
@@ -10,7 +12,18 @@ function ($, _, Backbone, DefaultView) {
     siteRouter.on('route:defaultAction', function(){
       var defaultView = new DefaultView();
       defaultView.render();
-      console.log('default');
+    });
+
+    siteRouter.on('route:aboutAction', function(){
+      var aboutView = new AboutView();
+      aboutView.render();
+      console.log('about');
+    });
+
+    siteRouter.on('route:contactAction', function(){
+      var contactView = new ContactView();
+      contactView.render();
+      console.log('concact');
     });
     Backbone.history.start();
   };

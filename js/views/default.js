@@ -1,4 +1,5 @@
-define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 'text!/templates/page.mustache'], function ($, _, Backbone, Mustache, PageModel, pageTemplate) {
+define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 'text!/templates/page.mustache'],
+ function ($, _, Backbone, Mustache, PageModel, pageTemplate) {
   var DefaultView = Backbone.View.extend({
     el: $('.middle'),
     data: {},
