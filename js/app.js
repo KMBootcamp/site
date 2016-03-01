@@ -1,5 +1,5 @@
-define(['jquery', 'underscore', 'backbone', 'router'],
-function ($, _, Backbone, SiteRouter) {
+define(['router'],
+function (SiteRouter) {
   var initialize = function(){
     SiteRouter.initialize();
   };
