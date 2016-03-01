@@ -4,7 +4,7 @@ require.config({
     'underscore': '/bower_components/underscore/underscore',
     'backbone': '/bower_components/backbone/backbone',
     'mustache': '/bower_components/mustache.js/mustache',
-    'text': '/bower_components/requirejs-text/text'
+    'text': '/bower_components/text/text'
   },
   shim: {
     'jquery': {
