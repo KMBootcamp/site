@@ -14,5 +14,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KMBootcamp/site/issues"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
