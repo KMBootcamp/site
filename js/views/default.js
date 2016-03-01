@@ -1,19 +1,66 @@
-define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 'text!/templates/page.mustache'],
- function ($, _, Backbone, Mustache, PageModel, pageTemplate) {
+define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 'text!/templates/page.mustache',
+ 'text!/templates/header.mustache', 'text!/templates/navigation.mustache'],
+ function ($, _, Backbone, Mustache, PageModel, pageTemplate, headerTemplate, navigationTemplate) {
   var DefaultView = Backbone.View.extend({
     el: $('.middle'),
+    elHeader: $('.header'),
+    elNavigation: $('.mainItem'),
     data: {},
+    headerData: {},
+    navigationData: {},
 
     initialize: function() {
       this.data = {
-        title: 'Virsraksts',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        main: {
+          title: 'main title',
+          content: 'main content'
+        },
+        about: {
+          title: 'about title',
+          content: 'about content'
+        },
+        contact: {
+          title: 'contact title',
+          content: 'contact content'
+        },
       };
+
+      this.headerData = {
+        main: {
+          path: '<a href="#main" class="siteHref">Site</a>'
+        },
+        about: {
+          path: '<a href="#main" class="siteHref">Site</a> / about'
+        },
+        contact: {
+          path: '<a href="#main" class="siteHref">Site</a> / contact'
+        }
+      };
+
+      this.navigationData = {
+        main: {
+          navigation: 'Main'
+        },
+        about: {
+          navigation: '<a href="#">Main</a>'
+        },
+        contact: {
+          navigation: '<a href="#">Main</a>'
+        }
+      };
+
     },
 
-    render: function(){
-      var compiledTemplate = Mustache.render( pageTemplate, this.data );
+    render: function(pageType){
+      var compiledTemplate = Mustache.render( pageTemplate, this.data[pageType] );
       this.$el.html( compiledTemplate );
+
+      var compiledHeaderTemplate = Mustache.render ( headerTemplate, this.headerData[pageType]);
+      $('.header').html( compiledHeaderTemplate );
+
+      var compiledNavigationTemplate = Mustache.render( navigationTemplate, this.navigationData[pageType]);
+      $('.mainItem').html(compiledNavigationTemplate);
+
     }
   });
   return DefaultView;

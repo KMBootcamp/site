@@ -65,3 +65,12 @@
     font-size: 24px;
   }
 }
+
+.siteHref{
+  text-decoration : none;
+  color : #000;
+}
+
+.siteHref:hover{
+  color : #000;
+}
