@@ -112,19 +112,20 @@
   .middle{
     float: none;
   }
+
   .bloks{
     float: none;
     display: block;
     word-wrap: break-word;
   }
+
   .paragrafs{
     width: 200px;
-    z-index: 1;
     position: absolute;
-  }
+}
+
   .visraksts{
-    width: 200px;
-    z-index: 1;
+    z-index: -1;
     position: absolute;
   }
 }
