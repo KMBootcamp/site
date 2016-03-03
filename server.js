@@ -7,6 +7,10 @@ app.get('/', function(req, res){
 
 });
 
+app.get('/pages', function(req, res){
+
+});
+
 app.listen(3000, function(){
   console.log("strada");
 });

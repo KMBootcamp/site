@@ -1,0 +1,92 @@
+@import 'variables';
+
+.header{
+  width: 100%;
+  float: left;
+  background-color: brown;
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+}
+
+.footer{
+  width: 100%;
+  float: left;
+  background-color: brown;
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+  border-top: 1px solid;
+}
+
+.menu{
+  width: 100%;
+  float: left;
+  text-align: center;
+  background-color: #ccc;
+  border-bottom: 1px solid;
+  padding-top: 12px;
+  position:relative;
+}
+
+.main{
+  padding: 0px 15px 0px 15px;
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.left{
+  width: 30%;
+  float: left;
+}
+
+.middle{
+  width: 40%;
+  float: left;
+  background-color: grey;
+  padding: 5px 5px 5px 5px;
+}
+
+.right{
+  width: 30%;
+  float: left;
+}
+
+.menu--items{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 480px){
+  .middle{
+    font-size: 24px;
+  }
+}
+
+.siteHref{
+  text-decoration : none;
+  color : #000;
+}
+
+.siteHref:hover{
+  color : #000;
+}
+
+.navBtn {
+    padding: 4px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #ccc;
+    border: 2px solid $navBtnColor;
+}
+
+.navBtn:hover {
+    background-color: $navBtnColor;
+    color: white;
+    border: 2px solid $navBtnColor;
+}
