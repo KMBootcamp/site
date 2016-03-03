@@ -53,11 +53,7 @@
 
 .menu--items{
     list-style-type: none;
-}
-
-.menu--item{
-  display: inline-block;
-  margin: 0 10px;
+    margin-bottom: 15px;
 }
 
 @media (max-width: 480px){
@@ -73,4 +69,24 @@
 
 .siteHref:hover{
   color : #000;
+}
+
+.navBtn {
+    padding: 4px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #ccc;
+    border: 2px solid #808080;
+}
+
+.navBtn:hover {
+    background-color: #808080;
+    color: white;
+    border: 2px solid #808080;
 }
