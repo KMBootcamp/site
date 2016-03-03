@@ -56,10 +56,10 @@ define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 't
       this.$el.html( compiledTemplate );
 
       var compiledHeaderTemplate = Mustache.render ( headerTemplate, this.headerData[pageType]);
-      $('.header').html( compiledHeaderTemplate );
+      this.elHeader.html( compiledHeaderTemplate );
 
       var compiledNavigationTemplate = Mustache.render( navigationTemplate, this.navigationData[pageType]);
-      $('.mainItem').html(compiledNavigationTemplate);
+      this.elNavigation.html(compiledNavigationTemplate);
 
     }
   });

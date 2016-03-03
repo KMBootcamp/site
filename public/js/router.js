@@ -10,6 +10,7 @@ function ($, _, Backbone, DefaultView, AboutView, ContactView) {
   var initialize = function () {
     var siteRouter = new SiteRouter();
     var defaultView = new DefaultView();
+
     siteRouter.on('route:defaultAction', function(){
       defaultView.render('main');
     });
