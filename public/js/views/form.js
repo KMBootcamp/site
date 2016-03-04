@@ -22,6 +22,7 @@ define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 't
         image: 'https://source.unsplash.com/random/300x150'
       });
       pageModel.save();
+      location.reload();
     },
 
     render: function(){

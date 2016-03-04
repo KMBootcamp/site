@@ -19,6 +19,7 @@ define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 't
         id: identifikators,
       });
       pageModel.destroy();
+      location.reload();
     },
 
     render: function(){
