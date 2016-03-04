@@ -8,6 +8,7 @@ function ($, _, Backbone, DefaultView, PageView) {
       '*other': 'defaultAction'
     }
   });
+
   var initialize = function () {
     var siteRouter = new SiteRouter();
     var defaultView = new DefaultView();

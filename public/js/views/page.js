@@ -13,7 +13,6 @@ define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 't
     render: function(){
       this.data = this.model.toJSON();
       var compiledTemplate = Mustache.render(pageTemplate, this.data);
-      console.log(this.data)
       this.$el.html(compiledTemplate);
     }
   });

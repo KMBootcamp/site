@@ -16,5 +16,7 @@ define(['jquery', 'underscore', 'backbone', 'mustache', '/js/collections/pages.j
       this.$el.html(compiledTemplate);
     }
   });
+
   return DefaultView;
+
 });
