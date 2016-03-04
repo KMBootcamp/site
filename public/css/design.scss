@@ -1,20 +1,11 @@
 @import 'variables';
 
-.header{
-  width: 100%;
-  float: left;
-  background-color: brown;
-  text-align: center;
-  padding: 15px 15px 15px 15px;
-}
-
-.footer{
-  width: 100%;
-  float: left;
-  background-color: brown;
-  text-align: center;
-  padding: 15px 15px 15px 15px;
-  border-top: 1px solid;
+.header, .footer{
+ width: 100%;
+ float: left;
+ background-color: brown;
+ text-align: center;
+ padding: 15px 15px 15px 15px;
 }
 
 .menu{
@@ -23,32 +14,32 @@
   text-align: center;
   background-color: #ccc;
   border-bottom: 1px solid;
-  padding-top: 12px;
+  padding: 12px 0px 12px 0px;
   position:relative;
 }
 
 .main{
-  padding: 0px 15px 0px 15px;
   width: 100%;
-  float: left;
-  text-align: center;
+  height: auto;
+  float:left;
+  padding: 0px 15px 0px 15px;
+  display: inline;
 }
 
-.left{
-  width: 30%;
+.left, .right{
+  width: 20%;
   float: left;
+  background-color: white;
 }
 
 .middle{
-  width: 40%;
+  width: 60%;
   float: left;
+  height: auto;
   background-color: grey;
   padding: 5px 5px 5px 5px;
-}
-
-.right{
-  width: 30%;
-  float: left;
+  border-left: 2px solid;
+  border-right: 2px solid;
 }
 
 .menu--items{
@@ -91,41 +82,42 @@
     border: 2px solid $navBtnColor;
 }
 
-.bloks{
-  float: left;
-}
-
-.bilde{
-  float: left;
+.list-item{
   width: 50%;
+  word-wrap: break-word;
+  float: left;
 }
 
-.paragrafs{
-  font-size: 5px;
+.image{
+  float: left;
+}
+
+.virsraksts{
+  font-size: 28px;
+  font-weight: bold;
 }
 
 @media (max-width: 1000px){
-  .bilde{
-    width: 200px;
+  .list-item{
+    width: 100%;
     position: relative;
   }
-  .middle{
-    float: none;
+  .image{
+    width: 500px;
+    height: auto;
   }
 
-  .bloks{
-    float: none;
-    display: block;
-    word-wrap: break-word;
-  }
-
-  .paragrafs{
-    width: 200px;
+  .apraksts{
     position: absolute;
-}
-
-  .visraksts{
-    z-index: -1;
-    position: absolute;
+    width: 500px;
+    bottom: 0;
   }
+
+  .virsraksts{
+    position: absolute;
+    width: 500px;
+    top: 0;
+    left: 0;
+  }
+
 }

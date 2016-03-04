@@ -1,5 +1,5 @@
-define(['jquery', 'underscore', 'backbone', 'mustache', '/js/collections/pages.js', 'text!/templates/pages.mustache'],
- function ($, _, Backbone, Mustache, PagesCollection, pagesTemplate) {
+define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 'text!/templates/page.mustache'],
+ function ($, _, Backbone, Mustache, PageModel, pageTemplate) {
   var DefaultView = Backbone.View.extend({
     el: $('.content-middle'),
     collection: {},
@@ -12,7 +12,7 @@ define(['jquery', 'underscore', 'backbone', 'mustache', '/js/collections/pages.j
 
     render: function(pageType){
       this.data = this.collection.toJSON();
-      var compiledTemplate = Mustache.render(pagesTemplate, this);
+      var compiledTemplate = Mustache.render(pageTemplate, this);
       this.$el.html(compiledTemplate);
     }
   });
