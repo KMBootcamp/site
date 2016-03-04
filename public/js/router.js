@@ -1,10 +1,11 @@
-define(['jquery', 'underscore', 'backbone', 'views/default', 'views/page', 'views/form'],
-function ($, _, Backbone, DefaultView, PageView, FormView) {
+define(['jquery', 'underscore', 'backbone', 'views/default', 'views/page', 'views/form', 'views/deleteForm'],
+function ($, _, Backbone, DefaultView, PageView, FormView, DeleteFormView) {
   var SiteRouter = Backbone.Router.extend({
     routes: {
       'about': 'aboutAction',
       'contact': 'contactAction',
       'form': 'formAction',
+      'deleteForm': 'deleteFormAction',
       'page/:id': 'pageAction',
       '*other': 'defaultAction'
     }
@@ -33,6 +34,10 @@ function ($, _, Backbone, DefaultView, PageView, FormView) {
     siteRouter.on('route:formAction', function(){
         var formView = new FormView();
     });
+
+    siteRouter.on('route:deleteFormAction', function(){
+      var deleteFormView = new DeleteFormView();
+    })
 
     Backbone.history.start();
   };

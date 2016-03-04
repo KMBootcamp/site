@@ -45,6 +45,13 @@ app.post('/pages', function(req, res){
   res.json(test);
 });
 
+app.delete('/pages/:id', function(req, res){
+  var delete2 = db.run("delete from pages where id = $id", {
+    $id: req.params.id
+  });
+  res.json(delete2);
+})
+
 app.listen(3000, function(){
   console.log("straadaa");
 });
