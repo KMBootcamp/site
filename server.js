@@ -7,28 +7,26 @@ var db = new sqlite.Database(file);
 
 app.use(express.static('public'));
 
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
 
 });
 
 app.get('/pages', function (req, res) {
-  db.serialize(function(){
-    db.all('select * FROM pages',
-     function(err, all){
+  db.serialize(function() {
+    db.all('SELECT * FROM pages', function(err, all) {
       res.json(all);
     });
   });
 });
 
 app.get('/pages/:id', function (req, res) {
-  db.serialize(function(){
-    db.all('select * FROM pages WHERE id = ' + req.params.id,
-     function(err, all){
+  db.serialize(function() {
+    db.get('SELECT * FROM pages WHERE id = ' + req.params.id, function(err, all) {
       res.json(all);
     });
   });
 });
 
-app.listen(3000, function(){
-  console.log("straadaa");
+app.listen(3000, function () {
+  console.log('working');
 });
