@@ -29,6 +29,7 @@ define(['jquery', 'underscore', 'backbone', 'mustache', '/js/models/page.js', 't
       var compiledTemplate = Mustache.render(formTemplate, this.data);
       this.$el.html(compiledTemplate);
     }
+
   });
   return FormView;
 });
